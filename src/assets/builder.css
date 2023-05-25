@@ -1,0 +1,10 @@
+
+.builder {
+    width: 100%;
+    background: rgb(249, 249, 253);
+    display: flex;
+}
+.builder .builder-body {
+    width: 50%;
+    margin: 15px auto;
+}

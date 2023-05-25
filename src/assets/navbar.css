@@ -1,0 +1,43 @@
+
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: rgb(red, green, blue);
+}
+nav .left, .right {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+}
+nav .left .main-txt {
+    padding: 2px;
+    margin-right: 10px;
+    text-decoration: none;
+    font-size: 50px;
+    font-weight: bold;
+    font-family: cursive;
+    color: blue;
+}
+nav .right .btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    font-size: 18px;
+    font-weight: bold;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    margin-left: 20px;
+    border-radius: 5px;
+    color: rgb(43, 41, 41);
+    border: 1px solid rgb(43, 41, 41);
+    text-decoration: none;
+}
+nav .left .main-txt, .txt:hover, .btn:hover {
+    cursor: pointer;
+}
+nav .left .active, nav .right .active {
+    color:rgb(131, 82, 82);
+    text-decoration: underline;
+}
