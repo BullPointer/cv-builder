@@ -1,10 +1,269 @@
-
+.warning {
+    text-align: center;
+    display: block;
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 10px;
+    background: rgb(223, 66, 66);
+    color: white;
+    font-size: small;
+}
 .builder {
     width: 100%;
-    background: rgb(249, 249, 253);
     display: flex;
+    background: rgb(249, 249, 253);
 }
 .builder .builder-body {
     width: 50%;
     margin: 15px auto;
 }
+
+.container {
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgb(0, 0, 0, 0.3);
+    z-index: 5;
+}
+.isActive {
+    display: none;
+}
+.container .box {
+    width: 50%;
+    height: auto;
+    display: flex;
+    border-radius: 5px;
+    background: white;
+}
+
+.container .box .left-side{
+    width: 40%;
+    height: 100%;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+    background: rgb(91, 91, 109);
+}
+.container .box .left-side .img-box{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 15px;
+}
+.container .box .left-side .personal-box{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: center;
+    background: pink;
+}
+.container .box .left-side .personal-box .msg-title{
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: center;
+    border-bottom: 1px solid #413f3f;
+    padding: 0 0 0 5%;
+    font-size: medium;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    color: rgb(37, 27, 27);
+}
+.container .box .left-side .personal-box .msg{
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: center;
+    padding: 0 0 0 5%;
+    font-size: small;
+    /* color: rgb(54, 49, 49); */
+    color: black;
+}
+.container .box .left-side .img-box img{
+    width: 100px;
+    height: auto;
+    border-radius: 100%;
+}
+
+.container .box .right-side{
+    width: 100%;
+    height: 100%;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+    color: rgb(36, 34, 34);
+    background: white;
+}
+.container .box .right-side .top{
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+.container .box .right-side .top .close{
+    position: absolute;
+    right: 3px;
+    float: right;
+    font-family: monospace;
+    font-size: 20px;
+}
+.container .box .right-side .top .close:hover{
+    cursor: pointer;
+}
+.container .box .right-side .name{
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+.container .box .right-side .work-title{
+    font-size: 15px;
+    font-weight: bold;
+    text-align: center;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+.container .box .right-side .obj{
+    padding: 4px 8px;
+    font-size: 12px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.container .box .right-side .sub-box {
+    display: flex;
+    flex-direction: column;
+    margin: 10px;
+}
+.container .box .right-side .sub-box .title{
+    font-size: 12px;
+}
+.container .box .right-side .sub-box .msg{
+    width: 95%;
+    margin: 4px 60px 0 4px;
+    font-size: 10px;
+    color: rgb(44, 43, 43);
+}
+.container .box .right-side .sub-box .sub-title{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 4px 60px 0 4px;
+    font-size: 10px;
+    color: rgb(44, 43, 43);
+}
+.container .box .right-side .sub-box .sub-title .title-info:first-child{
+    display: flex;
+    gap: 8px;
+}
+
+@media only screen and (max-width: 700px) {
+    .builder {
+        position: relative;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    .builder .builder-body {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 90%;
+        text-align: center;
+    }
+    .builder .builder-body .builder-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    .container .box {
+        width: 90%;
+    }
+    .container .box .left-side .personal-box .msg{
+        font-size: x-small;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+.main-container {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: start;
+    justify-content: center;
+    background: black;
+}
+.main-container .main-left-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 50%;
+    padding: 40px;
+    margin: 40px;
+    border-radius: 5px;
+    background: rgb(76, 88, 76);
+}
+.main-container .main-left-box .main-msg:first-child {
+    font-weight: bold;
+    font-size: 15px;
+    font-family: monospace;
+    color: rgb(187, 168, 176);
+}
+.main-container .main-left-box .main-msg {
+    width: 70%;
+    font-weight: bold;
+    font-size: 35px;
+    color: white;
+    font-style: italic;
+}
+.main-container .main-right-box {
+    width: 50%;
+    height: 100vh;
+}
+.main-container .main-right-box .main-img {
+    width: 100%;
+    height: 100vh;
+}
+
+@media only screen and (max-width: 700px) {
+    .main-container {
+        width: 100%;
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        /* padding: 0 10px 10px 10px; */
+    }
+    .main-container .main-left-box {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 80%;
+        padding: 40px;
+        margin-top: 20px;
+        border-radius: 5px;
+        background: rgb(76, 88, 76);
+    }
+    .main-container .main-left-box .main-msg:first-child {
+        font-size: 30px;
+    }
+    .main-container .main-right-box {
+        width: 100%;
+        height: 100vh;
+    }
+
+}
+

@@ -1,0 +1,204 @@
+
+.title {
+    margin: 10px 0;
+    font-weight: bold;
+    font-size: 30px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: rgb(51, 47, 47);
+}
+.msg {
+    width: 80%;
+    margin: 10px 0;
+    font-weight: 400;
+    font-size: 15px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: rgb(161, 158, 158);
+}
+
+ 
+
+form {
+    margin: 35px 0;
+}
+form .select-img {
+    display: flex;
+    align-items: center;
+    justify-content: start;
+}
+form .select-img .img-box {
+    display: flex;
+}
+form .select-img .img-box .profile-img{
+    font-size: 80px;
+}
+form .select-img .img-box img{
+    width: 80px;
+    height: 80px;
+    border-radius: 100%;
+    border: 2px solid rgb(83, 78, 78);
+}
+form .select-img input[type='file'] {
+    display: none;
+}
+form .select-img label {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 30px;
+    height: 0;
+    font-weight: bold;
+    font-size: 30px;
+    border-radius: 100%;
+    opacity: 0.6;
+}
+form textarea {
+    width: calc(80% - 20px);
+    padding: 15px 10px 15px 10px;
+    font-size: 14px;
+    resize: none;
+    border: 1px solid rgb(199, 199, 206);
+    border-radius: 5px;
+}
+form textarea:focus {
+    outline: none;
+    border: 1px solid rgb(199, 199, 206);
+}
+form .cert-box {
+    display: flex;
+    gap: 10px;
+}
+form .cert-box:hover {
+    cursor: pointer;
+}
+form .cert-box .cert-icon{
+    color: rgb(160, 143, 143);
+}
+form .cert-box .cert-msg{
+    font-size: medium;
+    font-weight: 500;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    opacity: 0.8;
+}
+form .dropdown {
+    width: 80%;
+    padding: 15px 15px 15px 0;
+    border-radius: 5px;
+    border: 1px solid rgb(199, 199, 206);
+    background: white;
+    opacity: 0.7;
+}
+form .double-name, .single-name, .check-box {
+    width: 80%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+form .double-name .name-box, .single-box {
+    /* width: 250px; */
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: start;
+    padding-left: 10px;
+    margin: 12px 0;
+    border: 1px solid rgb(199, 199, 206);
+    border-radius: 5px;
+}
+form .single-name .single-box {
+    width: 100%;
+}
+form .double-name .name-box .error, .single-name .single-box .error{
+    font-size: small;
+    color: red;
+}
+form .double-name .name-box label, .single-name label{
+    display: flex;
+    justify-content: start;
+    float: left;
+    padding: 0;
+    font-size: small;
+    opacity: 0.7;
+}
+form .double-name .name-box input[type='text'], 
+.single-name input[type='text'],
+.single-name input[type='date']{
+    outline: none;
+    padding: 8px 8px 8px 0;
+    border: none;
+    font-size: 18px;
+}
+form .double-btn {
+    width: 450px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    margin: 20px 0;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+form .double-btn .btn {
+    border-radius: 5px;
+    font-size: 18px;
+    font-weight: bold;
+    padding: 10px 70px;
+    color: white;
+    background: rgb(160, 143, 143);
+}
+form .double-btn .btn:hover {
+    cursor: pointer;
+    font-size: 12px;
+    color: rgb(58, 58, 61);
+}
+
+
+
+@media only screen and (max-width: 700px) {
+    form {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+    }
+    form .double-name {
+        display: flex;
+        flex-direction: column;
+        width: 80%;
+    }
+    form .double-name .name-box {
+        width: 100%;
+    }
+    form .double-name .name-box, .single-name .single-box {
+        padding: 0;
+    }
+    form .double-name .name-box label, .single-name .single-box label{
+        width: 100%;
+        padding: 5px 0;
+        text-align: center;
+        font-size: 15px;
+    }
+    form .double-name .name-box input[type='text'], 
+    .single-name .single-box input[type='text'],
+    .single-name .single-box input[type='date']{
+        width: 100%;
+        padding: 8px 0;
+    }
+    form .double-name, .single-name {
+        padding-left: 0;
+        margin-left: 0;
+    }
+    form .double-btn {
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-around;
+        margin: 0;
+    }
+    form .double-btn .btn {
+        padding: 5px 15px;
+        margin: 5px 0;
+        font-size: 13px;
+    }
+}

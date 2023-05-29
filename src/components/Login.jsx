@@ -3,6 +3,7 @@ import Joi from 'joi';
 import '../assets/login.css';
 import { useAuth } from '../utils/Auth';
 import { useNavigate, useLocation } from 'react-router-dom';
+import { errorChange, errorSubmit } from './Errorhandler';
 
 function Login() {
   const [user, setUser] = useState({email: '', password: ''});
@@ -23,17 +24,11 @@ function Login() {
       .string()
       .email({ minDomainSegments: 2, tlds: { allow: ['com', 'net'] } })
   })
-  const errorChange = (target) => {
-    const { name, value } = target; 
-    const obj = {[name]: value};
-    const subSchema =  {[name]: schema[name]}
-    const { error } = schema.validate(obj, subSchema);
-    return error ? error.details[0] : null;
-  }
+
   const handleChange = ({target}) => {
     const {name, value} = target;
     setUser({...user, [name]: value})
-    let error = errorChange(target);
+    let error = errorChange(schema, target);
     if (error) {
       const {message, path} = error;
       return setError({[path[0]]: message});
@@ -41,26 +36,16 @@ function Login() {
         setError(null);
     }
   }
-  const errorSubmit = () => {
-    const errors = {};
-    const { error } = schema.validate(user, { abortEarly: false });
-    if(error) {
-      for (let index = 0; index < error.details.length; index++) {
-        errors[error.details[index].path[0]] = error.details[index].message;
-      }
-      return errors;
-    } 
-    return null;
-  }
+
   const handleSubmit = (e) => {
     e.preventDefault();
-    const error = errorSubmit();
+    const error = errorSubmit(schema, user);
     if (!error) {
       auth.login(user);
-      return navigate(redirectPath, { replace: true });
+      navigate(redirectPath, { replace: true });
     }
     setError(error);
-  }
+  } 
   return (
     <>
     <nav> Resume Builder </nav>

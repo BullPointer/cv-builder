@@ -1,4 +1,4 @@
-
+ 
 
 .build-nav {
     display: flex;
@@ -17,10 +17,68 @@
     font-family: cursive;
     color: blue;
 }
-.build-nav .profile {
+.build-nav .toggle {
+    display: none;
+    font-size: 30px;
     margin-right: 20px;
 }
-.build-nav .profile .profile-img, .profile-arrow {
-    font-size: 30px;
+.build-nav .activeToggle {
+    display: block;
+}
+.build-nav .profile {
+    margin-right: 20px;
+    display: flex;
+}
+.build-nav .profile .img-box {
+    display: flex;
+}
+
+.build-nav .profile .img-box img{
+    width: 40px;
+    height: 40px;
+    border-radius: 100%;
+    border: 2px solid rgb(83, 78, 78);
+}
+.build-nav .profile .img-box .profile-img, .profile-arrow {
+    font-size: 40px;
     color: rgb(161, 147, 147);
+}
+.build-nav .profile .profile-dropdown {
+    display: none;
+    position: absolute;
+    padding: 20px;
+    right: 0;
+    top: 40px;
+    height: auto;
+}
+.build-nav .profile .active {
+    display: block;
+}
+.build-nav .profile .profile-dropdown .profile-select:first-child{
+    border-bottom: 1px solid #776e6e;
+    text-decoration: none;
+}
+.build-nav .profile .profile-dropdown .profile-select {
+    height: auto;
+    padding: 10px;
+    font-size: small;
+    font-weight: bold;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    -webkit-box-shadow: 2px 11px 21px 0px rgba(0,0,0,0.25); 
+    box-shadow: 2px 11px 21px 0px rgba(0,0,0,0.25);
+    color: white;
+    background: rgb(168, 157, 157);
+}
+.build-nav .profile .profile-dropdown .profile-select:hover {
+    cursor: pointer;
+    color: rgb(49, 47, 47);
+}
+
+@media only screen and (max-width: 700px) {
+    .build-nav .profile .profile-dropdown {
+        z-index: 2
+    }
+    .build-nav .logo-txt {
+        font-size: 25px;
+    }
 }

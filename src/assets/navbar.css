@@ -1,9 +1,11 @@
 
 nav {
+    width: fit-content;
     display: flex;
     align-items: center;
     justify-content: space-between;
     background: rgb(red, green, blue);
+    overflow-x: hidden;
 }
 nav .left, .right {
     display: flex;
@@ -40,4 +42,44 @@ nav .left .main-txt, .txt:hover, .btn:hover {
 nav .left .active, nav .right .active {
     color:rgb(131, 82, 82);
     text-decoration: underline;
+}
+
+@media only screen and (max-width: 700px) {
+    nav .left .main-txt {
+        text-align: center;
+        font-size: 30px;
+    }
+    nav .right .btn {
+        text-align: center;
+        font-size: 10px;
+        padding: 4px;
+    }
+}
+@media only screen and (max-width: 484px) {
+    nav .left .main-txt {
+        font-size: 17px;
+    }
+    nav .right .btn {
+        text-align: center;
+        font-size: 8px;
+        padding: 4px;
+    }
+}
+@media only screen and (max-width: 388px) {
+    nav .left .main-txt {
+        font-size: 13px;
+    }
+    nav .right .btn {
+
+        font-size: 8px;
+        padding: 4px;
+
+    }
+}
+@media only screen and (max-width: 340px) {
+
+    nav .right .btn {
+        height: 18px;
+        padding: 1px;
+    }
 }
