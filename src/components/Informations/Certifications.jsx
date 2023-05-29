@@ -27,7 +27,7 @@ export default function Certifications() {
   const handleSubmit = (e) => {
     e.preventDefault();
     resume.setResume('certifications', certifications);
-    navigate('/build-resume/education');
+    navigate('/cv-builder/build-resume/education');
   }
 
   return (

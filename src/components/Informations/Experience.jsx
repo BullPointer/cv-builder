@@ -26,7 +26,7 @@ export default function Experience() {
   const handleSubmit = (e) => {
     e.preventDefault();
     resume.setResume('experience', {...experience, country})
-    navigate('/build-resume/project');
+    navigate('/cv-builder/build-resume/project');
   }
 
   return (

@@ -8,15 +8,15 @@ function Navbar() {
   return (
     <nav>
         <div className='left'>
-          <NavLink to='/' className='main-txt'>Resume Builder</NavLink>
+          <NavLink to='/cv-builder' className='main-txt'>Resume Builder</NavLink>
         </div>
         <div className='right'>
           <NavLink 
-          to='/build-resume' 
+          to='/cv-builder/build-resume' 
           className='btn'>
             Build your Resume
           </NavLink>
-          <NavLink to='/login' className='btn'>Login</NavLink>
+          <NavLink to='/cv-builder/login' className='btn'>Login</NavLink>
         </div>
     </nav>
   )

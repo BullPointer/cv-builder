@@ -12,7 +12,7 @@ function Login() {
   const auth = useAuth();
   const navigate = useNavigate();
   const location = useLocation();
-  const redirectPath = location.state?.path || '/';
+  const redirectPath = location.state?.path || '/cv-builder';
 
   const schema = Joi.object({
     password: Joi.string()

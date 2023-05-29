@@ -15,7 +15,7 @@ export default function Career() {
   const handleSubmit = (e) => {
     e.preventDefault();
     resume.setResume('career', career);
-    navigate('/build-resume/experience');
+    navigate('/cv-builder/build-resume/experience');
   }
 
   return (

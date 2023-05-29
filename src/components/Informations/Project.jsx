@@ -19,7 +19,7 @@ export default function Project() {
   const handleSubmit = (e) => {
     e.preventDefault();
     resume.setResume('project', project);
-    navigate('/build-resume/certification');
+    navigate('/cv-builder/build-resume/certification');
   }
   
   return (

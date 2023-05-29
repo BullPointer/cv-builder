@@ -28,7 +28,7 @@ export const ResumeProvider = ({ children }) => {
     }
     const showResume = () => {
       if (Object.keys(data.personal).length === 0) {
-        navigate('/build-resume/personal');
+        navigate('/cv-builder/build-resume/personal');
         setWarning(true);
         return setTimeout(() => setWarning(false), 3000)
       }

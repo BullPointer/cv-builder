@@ -16,7 +16,7 @@ export function ResumeNav() {
 
     const handleLogout = () => {
         auth.logout();
-        navigate('/');
+        navigate('/cv-builder');
     } 
     const toggleName = () => {
         return windowSize <= 700 ? 'activeToggle' : '';

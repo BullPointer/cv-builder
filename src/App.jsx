@@ -21,7 +21,8 @@ function App() {
       <ResumeProvider>
         <Routes>
           <Route path='/' element={<Home />} />
-          <Route path='build-resume' element={
+          <Route path='/cv-builder' element={<Home />} />
+          <Route path='cv-builder/build-resume' element={
             <RequireAuth>
               <Build />
             </RequireAuth>
@@ -34,7 +35,7 @@ function App() {
             <Route path='certification' element={<Certifications />}/>
             <Route path='education' element={<Education />}/>
           </Route>
-          <Route path='login' element={<Login />} />
+          <Route path='cv-builder/login' element={<Login />} />
           <Route path='*' element={<NotFound />} />
         </Routes>
       </ResumeProvider>

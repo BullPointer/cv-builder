@@ -49,7 +49,7 @@ export default function Personal() {
     const error = errorSubmit(schema, personal);
     if (!error) {
       resume.setResume('personal', personal);
-      navigate('/build-resume/career');
+      navigate('/cv-builder/build-resume/career');
     }
     setError(error);
   }
@@ -80,9 +80,7 @@ export default function Personal() {
                   : <img src={previews} alt=""  />
                 }
               </div>
-              <label>
-                +
-                <input 
+              <label> + <input 
                   type="file" 
                   name="image"
                   accept='image/jpg, image/jpeg, image/png'
