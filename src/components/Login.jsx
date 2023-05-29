@@ -4,6 +4,7 @@ import '../assets/login.css';
 import { useAuth } from '../utils/Auth';
 import { useNavigate, useLocation } from 'react-router-dom';
 import { errorChange, errorSubmit } from './Errorhandler';
+import OauthLogin from './OauthLogin';
 
 function Login() {
   const [user, setUser] = useState({email: '', password: ''});
@@ -80,6 +81,11 @@ function Login() {
           <div className='submit-box'>
             <div className="forgot-password">Forgot Password?</div>
             <button>Submit</button>
+          </div>
+          <div className='google-auth'>
+            {}
+            <OauthLogin />
+            {/* <OauthLogin /> */}
           </div>
         </form>
     </div>
