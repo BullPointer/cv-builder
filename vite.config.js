@@ -10,6 +10,7 @@ export default defineConfig({
     {
       configureServer(server) {
         server.middlewares.use((req, res, next) => {
+          console.log(req.url);
           if (req.url === '/main.js') {
             res.setHeader('Content-Type', 'text/javascript');
           }
